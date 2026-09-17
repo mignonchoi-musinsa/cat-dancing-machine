@@ -1,0 +1,45 @@
+@keyframes cat-dance {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translateY(-18px) rotate(-10deg) scale(1.05);
+  }
+  30% {
+    transform: translateY(0) rotate(10deg) scale(0.95);
+  }
+  45% {
+    transform: translateY(-12px) rotate(-14deg) scale(1.08);
+  }
+  60% {
+    transform: translateY(0) rotate(14deg) scale(0.92);
+  }
+  75% {
+    transform: translateY(-16px) rotate(-6deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+.dancing-cat {
+  transform-origin: 50% 85%;
+  transition: transform 0.2s ease-out;
+}
+
+.dancing-cat:hover {
+  transform: scale(1.05);
+}
+
+.dancing-cat--playing {
+  animation: cat-dance 1.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dancing-cat,
+  .dancing-cat--playing {
+    animation: none;
+    transition: none;
+  }
+}

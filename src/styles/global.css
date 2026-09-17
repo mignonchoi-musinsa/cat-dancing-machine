@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, #fff8ef 0%, #ffe9d1 100%);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.app__title {
+  font-size: 2.5rem;
+  color: #d9720a;
+}
+
+.dancing-cat {
+  width: 240px;
+  touch-action: manipulation;
+}
+
+.animation-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.animation-controls__button {
+  min-height: 44px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  background: #ff9f43;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  touch-action: manipulation;
+}
+
+.animation-controls__button:focus-visible,
+.dancing-cat:focus-visible {
+  outline: 3px solid #d9720a;
+  outline-offset: 4px;
+}
+
+.animation-controls__hint {
+  font-size: 14px;
+  color: #6b6375;
+}
+
+/* 태블릿 */
+@media (max-width: 768px) {
+  .app {
+    gap: 24px;
+  }
+
+  .app__title {
+    font-size: 2rem;
+  }
+
+  .dancing-cat {
+    width: 180px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+  .app {
+    gap: 16px;
+    padding: 24px 12px;
+  }
+
+  .app__title {
+    font-size: 1.5rem;
+  }
+
+  .dancing-cat {
+    width: 140px;
+  }
+
+  .animation-controls__button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
